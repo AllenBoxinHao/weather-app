@@ -1,7 +1,5 @@
 import React from "react";
 
-const Forecast = () => {
-  <></>;
-};
+const Forecast = () => <div>Forecast</div>;
 
 export default Forecast;

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import CurrentCity from "../CurrentCity";
+import OtherCities from "../OtherCities";
+import Forecast from "../Forecast";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -14,6 +16,13 @@ const Wrapper = styled.div`
 const Container = styled.div`
   background: white;
   width: 850px;
+  border-radius: 32px;
+  box-shadow: 0 0 16px rgb(0, 0, 0, 50%);
+`;
+
+const Bottom = styled.div`
+  display: flex;
+  padding: 36px 24px;
 `;
 
 function App() {
@@ -21,6 +30,10 @@ function App() {
     <Wrapper>
       <Container>
         <CurrentCity />
+        <Bottom>
+          <OtherCities />
+          <Forecast />
+        </Bottom>
       </Container>
     </Wrapper>
   );

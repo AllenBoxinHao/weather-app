@@ -1,7 +1,5 @@
 import React from "react";
 
-const OtherCities = () => {
-  <></>;
-};
+const OtherCities = () => <div>OtherCities</div>;
 
 export default OtherCities;
