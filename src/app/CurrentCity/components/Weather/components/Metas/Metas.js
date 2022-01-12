@@ -14,11 +14,11 @@ const Divider = styled.div`
   background-color: rgb(255, 255, 255, 70%);
 `;
 
-const Metas = () => (
+const Metas = ({ humidity, wind }) => (
   <Container>
-    <Meta title="Humidity" value="66%" />
+    <Meta title="Humidity" value={`${humidity} %`} />
     <Divider />
-    <Meta title="Wind" value="1.79 K/M" />
+    <Meta title="Wind" value={`${wind} K/M`} />
   </Container>
 );
 

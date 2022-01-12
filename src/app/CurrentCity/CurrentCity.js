@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Weather from "./components/Weather/Weather";
 import CityName from "./components/CityName/CityName";
@@ -14,12 +14,15 @@ const Container = styled.div`
   align-items: flex-start;
 `;
 
-const CurrentCity = () => (
-  <>
+const CurrentCity = () => {
+  const [data, setData] = useState();
+
+  return (
     <Container>
-      <Weather />
-      <CityName />
+      <Weather data={data} setData={setData} />
+      <CityName data={data}/>
     </Container>
-  </>
-);
+  );
+};
+
 export default CurrentCity;
